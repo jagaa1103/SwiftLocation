@@ -26,14 +26,6 @@ class LocationService: NSObject, CLLocationManagerDelegate{
     }
     
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        
-        if status == .AuthorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-        }
-        
-    }
-    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
             
